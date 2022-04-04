@@ -1,0 +1,4 @@
+{
+    "port" : 1337,
+    "dbUri" : "mongodb://localhost:27017/allfunds-digital-technical-test"
+}

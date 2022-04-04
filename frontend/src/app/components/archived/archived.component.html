@@ -1,0 +1,21 @@
+<div class="newsContent">
+    <h1>ARCHIVED NEWS</h1>
+
+    <div class="newsContainer">
+        <div *ngIf="archivedNews && archivedNews.length > 0;  else elseBlock">
+            <div *ngFor="let new of archivedNews" class="aNew">
+                <h2>{{new.title}}</h2>
+                <h3>{{new.description}}</h3>
+                <p>{{new.content}}</p>
+                <div>
+                    <span>Published by: {{new.author}}, {{new.date | date:'yyyy-MM-dd'}}</span>
+                    <button (click)="deleteArchivedNews(new._id)">Remove</button>
+                </div>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <h2 class="mne">There's no archived news left</h2>
+        </ng-template>
+    </div>
+        
+</div>

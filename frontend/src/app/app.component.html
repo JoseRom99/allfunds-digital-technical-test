@@ -1,0 +1,26 @@
+<header>
+<nav>
+  <div class="navBar">
+    
+    <a href="#"><h1>Allfunds Digital technical test</h1></a>
+    
+    <div class="menu">
+      <a href="news">NEWS</a>
+      <a href="archived">ARCHIVED</a>
+    </div>
+    <button [ngClass]="toggled ? 'hamburguer is-active': 'hamburguer'" (click)="toggleHamburguer()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+</header>
+<div  [ngClass]="toggled ? 'mobile-nav is-active': 'mobile-nav'" (click)="toggleHamburguer()">
+  <a href="news">NEWS</a>
+  <a href="archived">ARCHIVED</a>
+</div>
+
+<div id='content' class="page-wrapper">
+  <router-outlet></router-outlet>
+</div>
